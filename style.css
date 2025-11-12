@@ -1,0 +1,42 @@
+.tic-tac-toe {
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+.tic-tac-toe td {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.tic-tac-toe td:hover {
+  background: #f0f0f0;
+}
+.animated-circle {
+  stroke-dasharray: 188.4; /* 2 * PI * r (r=30) */
+  stroke-dashoffset: 188.4;
+  animation: draw-ring 0.5s linear forwards;
+}
+
+@keyframes draw-ring {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.animated-cross {
+  stroke-dasharray: 56.57; /* Länge der Linie (sqrt(40^2 + 40^2)) */
+  stroke-dashoffset: 56.57;
+  animation: draw-cross 0.2s linear forwards;
+}
+.animated-cross-delay {
+  animation-delay: 0.3s;
+}
+
+@keyframes draw-cross {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
