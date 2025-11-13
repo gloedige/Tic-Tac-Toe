@@ -86,4 +86,7 @@ h1 {
   display:block;
   text-align:center;
   margin-bottom:10px;
+  font-size:24px;
+  color:white;
+  font-family: 'Arial', sans-serif;
 }

@@ -69,11 +69,18 @@ function isGameFinished() {
   return fields.every(f => f !== null);
 }
 
-function updateGameStatus() {
+function updateGameStatus(currentPlayer) {
   const status = document.getElementById('game-status');
+  let playerName
+  if (currentPlayer == 'circle'){
+    playerName = 'Kreis';
+  }
+  else if (currentPlayer == 'cross'){
+    playerName = 'Kreuz';
+  }
   if (!status) return;
   if (checkWinner()) {
-    status.textContent = 'Spiel beendet: Gewinner!';
+    status.textContent = `Spiel beendet: ${playerName} hat gewonnen!`;
   } else if (fields.every(f => f !== null)) {
     status.textContent = 'Spiel beendet: Unentschieden!';
   } else {
@@ -91,7 +98,7 @@ function cellClicked(row, col) {
   const result = checkWinner();
   if (result) {
     drawWinningLine(result.pattern);
-    updateGameStatus();
+    updateGameStatus(currentPlayer);
     return;
   }
   if (fields.every(f => f !== null)) {
