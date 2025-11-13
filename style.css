@@ -1,6 +1,19 @@
 body{
     background-color: dimgray;
 }
+h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
 .tic-tac-toe {
   border-collapse: collapse;
   margin: 20px auto;
@@ -16,6 +29,9 @@ body{
   cursor: pointer;
   transition: background 0.2s;
   background: transparent;
+}
+.tic-tac-toe td:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 .tic-tac-toe tr:first-child td {
   border-top: none;
@@ -53,4 +69,21 @@ body{
   to {
     stroke-dashoffset: 0;
   }
+}
+.resetButton {
+  display: block;
+  margin: 0 auto 10px auto;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.game_status{
+  display:block;
+  text-align:center;
+  margin-bottom:10px;
 }
